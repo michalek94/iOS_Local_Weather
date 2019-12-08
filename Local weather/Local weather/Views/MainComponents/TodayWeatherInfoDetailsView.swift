@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TodayWeatherInfoDetailsView: View {
     
-    var viewModel: WeatherViewModel
+    @ObservedObject var viewModel: WeatherViewModel
     
     var body: some View {
         ContentBackgroundVStack(alignment: .leading) {

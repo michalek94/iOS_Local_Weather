@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentBackgroundVStack<Content:View>: View {
+struct ContentBackgroundVStack<Content: View>: View {
     
     private let alignment: HorizontalAlignment
     private let spacing: CGFloat?

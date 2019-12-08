@@ -10,15 +10,15 @@ import SwiftUI
 
 struct DateView: View {
     
-    var model: WeatherViewModel? = nil
+    @ObservedObject var model: WeatherViewModel
     
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text("\(model?.weather?.getUserReadableDate(format: "d MMM") ?? "")")
+            Text("\(model.weather?.getUserReadableDate(format: "d MMM") ?? "")")
                 .font(.headline)
                 .foregroundColor(Color(.sRGB, red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
-            Text("\(model?.weather?.getUserReadableDate(format: "EEEE") ?? "")")
+            Text("\(model.weather?.getUserReadableDate(format: "EEEE") ?? "")")
                 .font(.subheadline)
                 .foregroundColor(Color(.sRGB, red: 255/255, green: 255/255, blue: 255/255, opacity: 0.75))
         }

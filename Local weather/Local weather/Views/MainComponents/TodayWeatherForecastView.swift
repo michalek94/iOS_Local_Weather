@@ -8,14 +8,9 @@
 
 import SwiftUI
 
-struct ForeCast {
-    var id: Int
-    let hour, imageUrl, temperature: String
-}
-
 struct TodayWeatherForecastView: View {
     
-    var viewModel: WeatherForecastViewModel
+    @ObservedObject var viewModel: WeatherForecastViewModel
     
     var body: some View {
         ContentBackgroundVStack(alignment: .leading) {

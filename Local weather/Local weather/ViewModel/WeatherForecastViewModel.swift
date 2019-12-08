@@ -22,11 +22,11 @@ class WeatherForecastViewModel: ObservableObject {
                 switch result {
                 case .success(let data):
                     DispatchQueue.main.async {
-                        dispatch.leave()
+                        defer { dispatch.leave() }
                         self.forecast = data
                     }
                 case .failure(let error):
-                    dispatch.leave()
+                    defer { dispatch.leave() }
                     print("An error has occurred: \(error.description)")
                 }
             }
