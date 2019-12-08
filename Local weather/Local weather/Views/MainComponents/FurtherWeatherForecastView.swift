@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FurtherWeatherForecastView: View {
     
-    var viewModel: WeatherForecastViewModel
+    @ObservedObject var viewModel: WeatherForecastViewModel
     
     var body: some View {
         ContentBackgroundVStack(alignment: .leading) {
